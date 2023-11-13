@@ -1,27 +1,18 @@
-
-import Link from 'next/link';
-
+import React from 'react';
+import Logo from './logo';
+import Search from './search';
+import CardCount from './CardCount';
+import User from './User';
+import HamburgerMenu from './hamburgerMenu';
 const Navbar = () => {
     return (
-        <nav>
-            <ul>
-                <li>
-                    <Link href="/">
-                        <a>Home</a>
-                    </Link>
-                </li>
-                <li>
-                    <Link href="/about">
-                        <a>About</a>
-                    </Link>
-                </li>
-                <li>
-                    <Link href="/contact">
-                        <a>Contact</a>
-                    </Link>
-                </li>
-            </ul>
-        </nav>
+        <div className='flex items-center justify-between gap-3 md:gap:10 px-3 md:px:19 h-16 bg-orange-600'>
+            <Logo />
+            <Search />
+            <CardCount />
+            <User />
+            <HamburgerMenu />
+        </div>
     );
 };
 
